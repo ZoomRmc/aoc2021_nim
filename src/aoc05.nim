@@ -17,16 +17,17 @@ iterator count[T: SomeInteger](x, y: T): T =
   else:
     for n in countdown(x, y): yield n
 
-iterator lineIt(l: L): P = #if not on the line will cover area between Ps!
+iterator lineIt(l: L): P = # if not on the line will cover area between Ps!
   for y in count(l.s.y, l.d.y):
     for x in count(l.s.x, l.d.x):
       yield (x, y)
 
+
 iterator diagIt(l: L): P =
-  let hInc = if l.s.x < l.d.x: 1 else: -1
-  let vInc = if l.s.y < l.d.y: 1 else: -1
+  let hSgn = if l.s.x < l.d.x: 1 else: -1 # or sgn(l.d.x - l.s.x) from std/math
+  let vSgn = if l.s.y < l.d.y: 1 else: -1
   for step in 0..abs(l.s.x - l.d.x):
-    yield (x: (l.s.x + step*hInc), y: (l.s.y + step*vInc))
+    yield (x: (l.s.x + step*hSgn), y: (l.s.y + step*vSgn))
 
 when isMainModule:
   let (input, maxP) = lines("input/aoc05.txt") --> fold(
