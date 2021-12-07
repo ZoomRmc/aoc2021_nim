@@ -22,7 +22,6 @@ iterator lineIt(l: L): P = # if not on the line will cover area between Ps!
     for x in count(l.s.x, l.d.x):
       yield (x, y)
 
-
 iterator diagIt(l: L): P =
   let hSgn = if l.s.x < l.d.x: 1 else: -1 # or sgn(l.d.x - l.s.x) from std/math
   let vSgn = if l.s.y < l.d.y: 1 else: -1

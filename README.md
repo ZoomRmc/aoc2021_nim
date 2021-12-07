@@ -15,3 +15,9 @@ What I'm trying to stick to while writing the solutions, in order of importance:
 
 ## Notes on specific days
 **Spoilers below!**
+
+### Day 7
+<details>
+<summary>Day 7 spoiler</summary>
+Part 1 is just a median. However, it requires a sorted array, and why have that when summing a bunch of differences is cheaper. Plus, we can solve both parts iterating the input only once, as the second part requires to calculate the triangle numbers. Easy with the famous Gauss trick.
+</details>
