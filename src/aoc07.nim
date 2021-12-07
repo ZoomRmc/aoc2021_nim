@@ -8,12 +8,9 @@ func triangle(n: int): int = n*(n+1) div 2
 
 when isMainModule:
   let
-    (input, minI, maxI) = (readFile("input/aoc07.txt").strip()).split(',') -->
-      map(parseInt).fold( (newSeq[int](), high(int), 0), block:
-        a[0].add(it)
-        (a[0], min(it, a[1]), max(it, a[2]))
-      )
-    (p1, p2) = (minI..maxI) --> map(( let pos = it;
+    input = (readFile("input/aoc07.txt").strip()).split(',') -->
+      map(parseInt)
+    (p1, p2) = input --> map(( let pos = it;
       input --> map( abs(pos - it) ).map( (it, triangle(it)) ).sum()
     )).reduce(lower(it.accu, it.elem))
   echo p1 #348996
