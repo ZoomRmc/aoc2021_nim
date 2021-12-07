@@ -19,5 +19,5 @@ What I'm trying to stick to while writing the solutions, in order of importance:
 ### Day 7
 <details>
 <summary>Day 7 spoiler</summary>
-Part 1 is just a median. However, it requires a sorted array, and why have that when summing a bunch of differences is cheaper. Plus, we can solve both parts iterating the input only once, as the second part requires to calculate the triangle numbers. Easy with the famous Gauss trick.
+Part 1 is just a median. However, it requires a sorted array, and why have that when summing a bunch of differences is almost as cheap for the provided input. Plus, we can solve both parts iterating the input only once, as the second part requires to calculate the triangle numbers. Easy with the famous Gauss trick. If the input were to be much larger, the math (sort, median and mean) is the way to go for both parts (for 100000 numbers of `0..<100000` it will be ~ 500 times faster).
 </details>
