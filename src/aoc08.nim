@@ -42,7 +42,7 @@ when isMainModule:
       digits: it[1].splitWhitespace() --> map(toSig)
     ))
     p1 = input --> map(it[1]).flatten().filter(it.len in {2,3,4,7}).count()
-    p2 = input -->> map(it.digits.toNum(decode(it.coding))).sum()
+    p2 = input --> map(it.digits.toNum(decode(it.coding))).sum()
 
   echo p1 #369
   echo p2 #1031553
