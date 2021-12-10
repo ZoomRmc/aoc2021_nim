@@ -34,7 +34,7 @@ proc pushoutInsIfGrt[T: SomeNumber](s: var openArray[T], elem: T) =
       break
 
 when isMainModule:
-  let input = lines("input/aoc09.txt") --> map(it --> map(($it).parseInt.intA))
+  let input = lines("input/aoc09.txt") --> map(it --> map((it.ord - '0'.int).intA))
   let (mapW, mapH) = (input[0].len.intA, input.len.intA)
   var p1 = 0
   var basinSizes: array[3, int]
