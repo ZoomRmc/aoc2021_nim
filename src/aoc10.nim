@@ -1,7 +1,6 @@
 import zero_functional, std/[algorithm]
 
-const
-  DIC = (
+const DIC = (
     br: ['(','[','{','<',')',']','}','>'],
     sc: [3, 57, 1197, 25137] )
 
