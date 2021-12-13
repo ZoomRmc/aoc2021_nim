@@ -1,4 +1,4 @@
-import zero_functional, std/[strutils, sequtils, sets, deques, hashes]
+import zero_functional, std/[sequtils, sets, deques, hashes]
 
 type intA = int8
 
