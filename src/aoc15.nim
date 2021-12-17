@@ -1,6 +1,6 @@
-import zero_functional, std/[tables, hashes, sets, heapqueue]
+import zero_functional, std/[tables, heapqueue]
 
-type intA = int32
+type intA = int16
 
 type P = tuple[x: intA, y: intA]
 
